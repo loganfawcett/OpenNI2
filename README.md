@@ -2,9 +2,7 @@
 
 http://structure.io/openni
 
-## Develop branch ##
-
-The latest ongoing development is currently being done in the develop branch.  Refer to README and ReleasesNotes in the develop branch for up to date build instructions.
+This is a modified version of OpenNI2 created specifically to be installed on the Jetson TX2. The process is laid out nicely by JetsonHacks, who also helped make this fork. 
 
 ## Contributing ##
 
@@ -13,46 +11,6 @@ Pull requests that do not apply cleanly on top of the [`develop` branch head](ht
 Other than that, sensible and meaningful contributions are very welcome!
 
 ## Building Prerequisites
-
-### Windows
-
-- Microsoft Visual Studio 2010
-
-    - Download and install from: http://msdn.microsoft.com/en-us/vstudio/bb984878.aspx
-
-- Microsoft Kinect SDK v1.6
-
-    - Download and install from: http://go.microsoft.com/fwlink/?LinkID=262831
-
-- Python 2.6+/3.x
-
-    - Download and install from: http://www.python.org/download/
-
-- PyWin32
-
-    - Download and install from: http://sourceforge.net/projects/pywin32/files/pywin32/
-    
-    Please make sure you download the version that matches your exact python version.
-
-- JDK 6.0
-
-    - Download and install from: http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u32-downloads-1594644.html
-    
-    You must also define an environment variable called `JAVA_HOME` that points to the JDK installation directory. For example:
-
-    	set JAVA_HOME=c:\Program Files (x86)\Java\jdk1.6.0_32
-
-- WIX 3.5
-
-    - Download and install from: http://wix.codeplex.com/releases/view/60102
-
-- Doxygen
-
-    - Download and install from: http://www.stack.nl/~dimitri/doxygen/download.html#latestsrc
-
-- GraphViz
-
-    - Download and install from: http://www.graphviz.org/Download_windows.php
 
 ### Linux
 
@@ -84,21 +42,11 @@ Other than that, sensible and meaningful contributions are very welcome!
 
 		sudo apt-get install libudev-dev
 
-- JDK 6.0
+- JDK 8.0
 
-    - Download and install from: http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u32-downloads-1594644.html
-
-    - Or use `apt`:
+    - Use `apt`:
     
-    	- On Ubuntu 10.x:
-
-				sudo add-apt-repository "deb http://archive.canonical.com/ lucid partner"
-				sudo apt-get update
-				sudo apt-get install sun-java6-jdk
-
-    	- On Ubuntu 12.x:
-
-				sudo apt-get install openjdk-6-jdk
+	    	sudo apt-get install openjdk-8-jdk
 
 - FreeGLUT3
 
@@ -124,16 +72,6 @@ Other than that, sensible and meaningful contributions are very welcome!
     
     		sudo apt-get install graphviz
 
-### Android
-
-- Download and install the Android NDK version **r8d**. Newer versions will **NOT** work.
-
-- For Mac OS X: http://dl.google.com/android/ndk/android-ndk-r8d-darwin-x86.tar.bz2
-- For Windows:  http://dl.google.com/android/ndk/android-ndk-r8d-windows.zip
-- For Linux:    http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2
-
-    Building Android packages requires the NDK_ROOT environment variable to be defined, and its value must be pointing to the NDK installation dir: `NDK_ROOT=/path/to/android-ndk-r8d`
-
 ## Building
 
 ### Building on Windows:
@@ -145,17 +83,6 @@ Other than that, sensible and meaningful contributions are very welcome!
   Run:
 
 	make
-
-### Cross-Compiling for ARM on Linux
-
-  The following environment variables should be defined:
-
-- `ARM_CXX=path-to-cross-compilation-g++`
-- `ARM_STAGING=path-to-cross-compilation-staging-dir`
-
-Then, run:
-
-	PLATFORM=Arm make
 
 ### Creating OpenNI2 packages
 
