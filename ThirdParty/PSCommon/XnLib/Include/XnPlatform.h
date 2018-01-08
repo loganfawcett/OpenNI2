@@ -53,6 +53,9 @@
 #include "Linux-x86/XnPlatformLinux-x86.h"
 #elif (__linux__ && __arm__)
 #include "Linux-Arm/XnPlatformLinux-Arm.h"
+#elif (__linux__ && __aarch64__)
+#include "Linux-Arm/XnPlatformLinux-Arm.h"
+
 #elif _ARC
 #include "ARC/XnPlaformARC.h"
 #elif (__APPLE__)

@@ -159,3 +159,8 @@ release: | all doc $(FINAL_DIR)
 
 # clean is cleaning all projects
 clean: $(ALL_PROJS_CLEAN)
+
+
+core_samples: $(CORE_SAMPLES)
+tools: $(ALL_TOOLS)
+
